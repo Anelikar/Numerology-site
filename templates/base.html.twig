@@ -1,12 +1,58 @@
+{# Required input:
+    products (list)
+        product.title
+        product.image
+        product.imageAlt
+        product.body
+
+    articles (list)
+        article.title
+        article.image
+        article.imageAlt
+        article.body
+#}
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Base Template{% endblock %}</title>
+    {% block stylesheets %}
+
+    {% endblock %}
+</head>
+
+<body>
+<div id="sidebar">
+    {% block sidebar %}
+        <img src="{{ asset('') }}"  {#TODO: Insert logo asset path#}
+             alt="Лого сайта">
+        {% for product in products %}
+            {{ include('product_preview.html.twig', { 'product': product}) }}
+        {% endfor %}
+        <div id="showAllProducts">
+            <h2><a href="{{ path('mainPage') }}">Показать все продукты</a></h2>
+        </div>
+    {% endblock %}
+    <nav>
+    {% block navigation %}
+        <div id="nav">
+            <h2> <a href="{{ path('mainPage') }}">Главная</a> </h2> {#TODO: create actuall pages and setup paths#}
+            <h2> <a href="{{ path('mainPage') }}">Статьи</a> </h2>
+            <h2> <a href="{{ path('mainPage') }}">Продукты</a> </h2>
+        </div>
+        <div id="Login">
+            <h2> <a href="{{ path('mainPage') }}">Войти</a></h2>
+        </div>
+    {% endblock %}
+    </nav>
+</div>
+<div id="content">
+    {% block body %}
+    {% endblock %}
+</div>
+{% block javascripts %}
+
+{% endblock %}
+</body>
 </html>
