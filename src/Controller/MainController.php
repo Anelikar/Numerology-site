@@ -14,6 +14,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+use App\Templates\ProductTemplate;
+use App\Templates\ArticleTemplate;
+
 class MainController extends AbstractController
 {
      /**
@@ -21,8 +24,8 @@ class MainController extends AbstractController
       */
     public function controller()
     {
-        $products = [new ProductTemplate()];
-        $articles = [new ArticleTemplate()];
+        $products = [new ProductTemplate(),new ProductTemplate(),new ProductTemplate()];
+        $articles = [new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate()];
         return $this->render('main.html.twig', [
             'products' => $products,
             'articles' => $articles

@@ -18,7 +18,11 @@
     <meta charset="UTF-8">
     <title>{% block title %}Base Template{% endblock %}</title>
     {% block stylesheets %}
-
+        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/article_preview.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/product_preview.css') }}">
     {% endblock %}
 </head>
 
@@ -34,19 +38,15 @@
             <h2><a href="{{ path('mainPage') }}">Показать все продукты</a></h2>
         </div>
     {% endblock %}
-    <nav>
-    {% block navigation %}
-        <div id="nav">
-            <h2> <a href="{{ path('mainPage') }}">Главная</a> </h2> {#TODO: create actuall pages and setup paths#}
-            <h2> <a href="{{ path('mainPage') }}">Статьи</a> </h2>
-            <h2> <a href="{{ path('mainPage') }}">Продукты</a> </h2>
-        </div>
-        <div id="Login">
-            <h2> <a href="{{ path('mainPage') }}">Войти</a></h2>
-        </div>
-    {% endblock %}
-    </nav>
 </div>
+<nav>
+    {% block navigation %}
+        <h2 class="nav"> <a href="{{ path('mainPage') }}">Главная</a> </h2> {#TODO: create actuall pages and setup paths#}
+        <h2 class="nav"> <a href="{{ path('mainPage') }}">Статьи</a> </h2>
+        <h2 class="nav"> <a href="{{ path('mainPage') }}">Продукты</a> </h2>
+        <h2 id="login"> <a href="{{ path('mainPage') }}">Войти</a></h2>
+    {% endblock %}
+</nav>
 <div id="content">
     {% block body %}
     {% endblock %}

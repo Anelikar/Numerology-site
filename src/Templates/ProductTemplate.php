@@ -5,7 +5,7 @@
  * Date: 20.01.2019
  * Time: 7:04
  */
-namespace App\Controller;
+namespace App\Templates;
 
 class ProductTemplate
 {

@@ -1,5 +1,9 @@
-<h2>{{ article.title }}</h2>
-<img src="{{ article.image }}"
-     alt="{{ article.imageAlt }}">
-<p>{{ article.body }}</p>
-<h3><a href="{{ path(article.path) }}">Читать дальше</a></h3>
+<div class="article_preview">
+    <h2>{{ article.title }}</h2>
+    <p>
+        <img src="{{ article.image }}"
+             alt="{{ article.imageAlt }}">
+        {{ article.body }}
+    </p>
+    <h3><a href="{{ path(article.path) }}">Читать дальше</a></h3>
+</div>

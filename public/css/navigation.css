@@ -1,0 +1,26 @@
+nav {
+    background: silver;
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0,1fr));
+    grid-gap: 20px;
+}
+
+.nav {
+    background: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#login {
+    background: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+
+    grid-column: 6;
+}
