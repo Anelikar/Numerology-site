@@ -3,9 +3,23 @@
     padding: 10px;
     border: 2px solid black;
 
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;*/
+
+    display: grid;
+    grid-gap: 10px;
+
+    position: fixed;
+    /*top: 0;
+    height: 100%;*/
+    height: 90%;
+    width: 13%;
+}
+
+#logo {
+    /*margin: 0 auto;
+    grid-row: 1;*/
 }
 
 #showAllProducts {
@@ -13,4 +27,6 @@
     padding: 10px;
     border: 2px solid black;
     margin: 10px auto;
+
+    grid-row: 5;
 }

@@ -4,3 +4,7 @@
     border: 2px solid black;
     margin: 10px auto;
 }
+
+.article_preview img {
+    float: left;
+}

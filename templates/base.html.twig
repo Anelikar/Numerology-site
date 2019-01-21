@@ -29,14 +29,12 @@
 <body>
 <div id="sidebar">
     {% block sidebar %}
-        <img src="{{ asset('') }}"  {#TODO: Insert logo asset path#}
+        <img id="logo" src="{{ asset('') }}"  {#TODO: Insert logo asset path#}
              alt="Лого сайта">
         {% for product in products %}
             {{ include('product_preview.html.twig', { 'product': product}) }}
         {% endfor %}
-        <div id="showAllProducts">
-            <h2><a href="{{ path('mainPage') }}">Показать все продукты</a></h2>
-        </div>
+        <h2 id="showAllProducts"><a href="{{ path('mainPage') }}">Показать все продукты</a></h2>
     {% endblock %}
 </div>
 <nav>
