@@ -1,0 +1,24 @@
+{# Required input:
+    products (list)
+        product.title
+        product.image
+        product.imageAlt
+        product.body
+#}
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product_preview.css') }}">
+{% endblock %}
+
+{% block sidebar %}
+    <img id="logo" src="{{ asset('') }}"  {#TODO: Insert logo asset path#}
+         alt="Лого сайта">
+    {% for product in products %}
+        {{ include('product_preview.html.twig', { 'product': product}) }}
+    {% endfor %}
+    <h2 id="showAllProducts"><a href="{{ path('mainPage') }}">Показать все продукты</a></h2>
+{% endblock %}

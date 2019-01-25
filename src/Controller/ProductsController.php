@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Serge
- * Date: 05.12.2018
- * Time: 15:21
+ * Date: 25.01.2019
+ * Time: 18:03
  */
 
 namespace App\Controller;
@@ -14,20 +14,17 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use App\Templates\ProductTemplate;
-use App\Templates\ArticleTemplate;
 
-class MainController extends AbstractController
+class ProductsController extends AbstractController
 {
-     /**
-      * @Route("/", name="mainPage")
-      */
+    /**
+     * @Route("/products", name="productsPage")
+     */
     public function controller()
     {
         $products = [new ProductTemplate(),new ProductTemplate(),new ProductTemplate()];
-        $articles = [new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate()];
-        return $this->render('main.html.twig', [
+        return $this->render('products.html.twig', [
             'products' => $products,
-            'articles' => $articles
         ]);
     }
 }
