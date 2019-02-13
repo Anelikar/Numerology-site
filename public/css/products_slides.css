@@ -1,0 +1,21 @@
+#products_slides {
+    margin: 2em auto;
+    height: 300px;
+
+    background: lightgray;
+    border: 2px solid black;
+}
+
+#temp {
+    display: grid;
+    margin: 2em auto;
+
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-gap: 20px;
+}
+
+.product_preview {
+    margin: 1em;
+    background: lightgray;
+    border: 2px solid black;
+}

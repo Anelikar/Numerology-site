@@ -20,5 +20,5 @@
     {% for product in products %}
         {{ include('product_preview.html.twig', { 'product': product}) }}
     {% endfor %}
-    <h2 id="showAllProducts"><a href="{{ path('mainPage') }}">Показать все продукты</a></h2>
+    <h2 id="showAllProducts"><a href="{{ path 'productsPage' }}">Показать все продукты</a></h2>
 {% endblock %}

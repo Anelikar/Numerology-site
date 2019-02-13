@@ -11,16 +11,29 @@
         article.body
 #}
 
-{% extends 'base_products_sidebar.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Welcome!{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/article_preview.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/products_slides.css') }}">
 {% endblock %}
 
 {% block body %}
+    {% block products_slides %}
+        <div id="products_slides">
+
+        </div>
+    {% endblock %}
+    {% block temp %}
+        <div id="temp">
+            {% for product in products %}
+                {{ include('product_preview.html.twig', { 'product': product}) }}
+            {% endfor %}
+        </div>
+    {% endblock %}
     {% for article in articles %}
         {{ include('article_preview.html.twig', { 'article': article}) }}
     {% endfor %}

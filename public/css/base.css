@@ -1,5 +1,5 @@
 body {
-    width: 90%;
+    width: 60%;
     margin: 2em auto;
 
     display: grid;
@@ -8,11 +8,21 @@ body {
 }
 
 nav {
-    grid-column: 3/13;
+    grid-column: 1/13;
     grid-row: 1;
 }
 
-#content {
-    grid-column: 3/13;
+#products_slides {
+    grid-column: 1/13;
     grid-row: 2;
+}
+
+#temp {
+    grid-column: 1/13;
+    grid-row: 3;
+}
+
+#content {
+    grid-column: 1/13;
+    grid-row: 4;
 }
