@@ -23,7 +23,7 @@ class MainController extends AbstractController
       */
     public function controller()
     {
-        $products = [new ProductTemplate(),new ProductTemplate(),new ProductTemplate()];
+        $products = [new ProductTemplate(),new ProductTemplate(),new ProductTemplate(),new ProductTemplate()];
         $articles = [new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate(),new ArticleTemplate()];
         return $this->render('main.html.twig', [
             'products' => $products,

@@ -1,6 +1,5 @@
 body {
-    width: 60%;
-    margin: 2em auto;
+    margin: 0;
 
     display: grid;
     grid-template-columns: repeat(12, minmax(0,1fr));
@@ -12,7 +11,7 @@ nav {
     grid-row: 1;
 }
 
-#products_slides {
+/*#products_slides {
     grid-column: 1/13;
     grid-row: 2;
 }
@@ -20,9 +19,12 @@ nav {
 #temp {
     grid-column: 1/13;
     grid-row: 3;
-}
+}*/
 
 #content {
+    width: 60%;
+    margin: 2em auto;
+
     grid-column: 1/13;
-    grid-row: 4;
+    grid-row: 2;
 }

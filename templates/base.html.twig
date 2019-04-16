@@ -10,18 +10,21 @@
 </head>
 
 <body>
+<nav>
+    <div id="navigation">
+    {% block navigation %}
+        <h2> <a href="{{ path('mainPage') }}">О Нас</a> </h2>
+        <h2> <a href="{{ path('articlesPage') }}">Нумерология</a> </h2>
+        <h2> <a href="{{ path('mainPage') }}">Программа</a> </h2>
+        <h2> <a href="{{ path('mainPage') }}">Обучение</a> </h2>
+        <h2 id="login"> <a href="{{ path('mainPage') }}">Войти</a></h2> {#TODO: create login page/form#}
+    {% endblock %}
+    </div>
+</nav>
 <div id="sidebar">
     {% block sidebar %}
     {% endblock %}
 </div>
-<nav>
-    {% block navigation %}
-        <h2 class="nav"> <a href="{{ path('mainPage') }}">Главная</a> </h2>
-        <h2 class="nav"> <a href="{{ path('articlesPage') }}">Статьи</a> </h2>
-        <h2 class="nav"> <a href="{{ path('productsPage') }}">Продукты</a> </h2>
-        <h2 id="login"> <a href="{{ path('mainPage') }}">Войти</a></h2> {#TODO: create login page/form#}
-    {% endblock %}
-</nav>
 <div id="content">
     {% block body %}
     {% endblock %}
